@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(15, 10, 41);
+    color: white;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 45px;
+    background: #1d1d2e;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+section h2{
+    color: #f2f2f2;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+section p{
+    margin-bottom: 2rem;
+}
+
+section form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form label{
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+form input{
+    padding: 15px;
+    outline: none;
+    border: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 1s;
+}
+form input:focus{
+    border-radius: 3rem;
+}
+form textarea{
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+form textarea:focus{
+    border-radius: 1rem;
+}
+
+form button{
+    padding: 15px;
+    cursor: pointer;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    transition: all 0.5s;
+    background: transparent;
+    margin-bottom: 20px;
+}
+form button:hover{
+    background-color: white;
+    color: black;
+    border-radius: 3rem;
+}
+
+/* Segunda Página*/
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.text{
+    margin-bottom: 1rem;
+    font-size: 40px;
+}
+.paragrafo{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.voltar{
+    margin-top: 4rem;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    border: 2px solid white;
+    transition: all 0.5s;
+}
+.voltar:hover{
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+}
