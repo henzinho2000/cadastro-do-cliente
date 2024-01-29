@@ -157,4 +157,25 @@ img{
     .fone1{
       display: none;
     }
+    .fone2{
+        width: 15rem;
+    }
+    .fone3{
+        width: 22rem;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    h2{
+        font-size: 1.5rem;
+    }
+    .fone1{
+      display: none;
+    }
+    .fone2{
+        width: 15rem;
+    }
+    .fone3{
+        margin-top: -50px;
+        width: 22rem;
+    }
   }
