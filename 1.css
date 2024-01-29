@@ -23,6 +23,9 @@ section{
     width: 60vh;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+h2{
+
+}
 section h2{
     color: #f2f2f2;
     font-size: 2.5rem;
@@ -30,6 +33,7 @@ section h2{
 }
 section p{
     margin-bottom: 2rem;
+
 }
 
 section form{
@@ -163,14 +167,29 @@ img{
     .fone3{
         width: 22rem;
     }
+    .paragrafo{
+        text-align: justify;
+        width: 80vw;
+    }
+    .text{
+        font-size: 2rem;
+        margin-left: 50px;
+    }
   }
   @media only screen and (max-width: 500px) {
-    h2{
-        font-size: 1.5rem;
+    section h2{
+        font-size: 2rem;
     }
-    .fone1{
-      display: none;
+    .text{
+        font-size: 2rem;
+
     }
+    .paragrafo{
+
+        text-align: justify;
+        width: 80vw;
+    }
+
     .fone2{
         width: 15rem;
     }
