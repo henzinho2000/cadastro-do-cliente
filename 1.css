@@ -112,13 +112,31 @@ form button:hover{
     color: black;
     border-radius: 30px;
 }
-
 img{
     width: 20rem;
+}
+.fone2{
+    position: absolute;
+    margin-top: 3rem;
+}
+
+.fone3{
+    width: 28.5rem;
+    animation: ola 20s infinite linear;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+@keyframes ola{
+    to{
+        transform: rotate(360deg );
+    }
+}
+
+.fone1{
     margin-left: 5rem;
     animation: 7s oi infinite ease-in-out;
     filter: drop-shadow(4px  220px 70px rgba(0, 0, 0, 0.52));
-    transform: translateZ(-120px);
 }
 @keyframes oi{
     0%{
@@ -135,8 +153,8 @@ img{
     }
 }
 
-@media only screen and (max-width: 600px) {
-    img{
+@media only screen and (max-width: 900px) {
+    .fone1{
       display: none;
     }
   }
