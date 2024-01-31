@@ -3,8 +3,33 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-
 }
+
+html{
+    scroll-behavior: smooth;  
+}
+
+.fone1{
+    opacity: 0;
+    margin-left: 5rem;
+    animation: 7s oi infinite ease-in-out ,2s tra .5s forwards;
+    position: relative;
+    -webkit-box-reflect: below 0 linear-gradient(transparent,rgba(0,0,0,.1));
+}
+
+@keyframes oi{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
 @keyframes tra {
     to{
         opacity: 1;
@@ -20,8 +45,8 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: rgb(39, 32, 82);
     color: white;
+    background: linear-gradient(rgb(102, 47, 185),rgba(29, 5, 64, 0.974));  
 }
 
 section{
@@ -94,7 +119,7 @@ form button:hover{
     border-radius: 3rem;
 }
 
-/* Segunda Página*/
+/*  Segunda Página  */
 
 .main{
     display: flex;
@@ -127,51 +152,88 @@ form button:hover{
     border-radius: 30px;
 }
 img{
-    width: 25rem;
+    width: 27rem;
 }
 .fone2{
     position: absolute;
     margin-top: 3rem;
+    animation: tra 1s;
+}
+@keyframes gra {
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 .fone3{
+    visibility: hidden;
     width: 28.5rem;
-    background-repeat: no-repeat;
     overflow: hidden;
-    animation: ola 15s infinite linear;
+    animation: 15s ola 1s infinite linear, 1s gra 1s;
+}
+
+@keyframes gra {
+    to{
+        transform: scale(1);
+        visibility: visible;
+    }
+    from{
+        transform: scale(0);
+        visibility: hidden;
+    }
 }
 
 @keyframes ola{
     to{
-        transform: rotate(360deg );
+        transform: rotate(-336deg );
+        visibility: visible;
+    }
+    from{
+        transform: rotate(24deg );
+        visibility: visible;
     }
 }
 
-.fone1{
-    opacity: 0;
-    margin-left: 5rem;
-    animation: 7s oi infinite ease-in-out ,2s tra .5s forwards;
-    filter: drop-shadow(4px  220px 70px rgba(0, 0, 0, 0.52));
+/*  whatsapp  */
+
+.whats{
+    position: absolute;
+    width: 8rem;
+    top: 80%;
+    left: 85%;
+    animation: 10s whats infinite running;
+    cursor: pointer;
+    transition: all 1.5s ease-in-out;
 }
-@keyframes oi{
-    0%{
-        scale: 1.05;
-        filter: drop-shadow(4px 220px 80px rgba(0, 0, 0, 0.52));
-    }
-    50%{
-        filter: drop-shadow(4px 100px 20px rgba(0, 0, 0, 0.52));
-        scale: 1;
-    }
-    100%{
-        scale: 1.05;
-        filter: drop-shadow(4px 220px 80px rgba(0, 0, 0, 0.52));
-    }
+
+.whats:hover{
+    scale: 1.15;
 }
+
+@keyframes whats {
+    0%{rotate: 10deg; scale: 1;}
+    2%{rotate: -10deg; scale: 1.05;}
+    4%{rotate: 10deg; scale: 1.05;}
+    6%{rotate: -10deg; scale: 1.05;}
+    8%{rotate: 10deg; scale: 1;}
+    9%{rotate: 0deg; scale: 1;}
+    75%{}
+    100%{}
+}
+
+
+/*  medias  */
 
 @media only screen and (max-width: 900px) {
     .fone1{
-      display: none;
+        display: none;
     }
+
     .fone2{
         width: 15rem;
     }
@@ -193,7 +255,6 @@ img{
     }
     .text{
         font-size: 2rem;
-
     }
     .paragrafo{
 
@@ -207,5 +268,8 @@ img{
     .fone3{
         margin-top: -50px;
         width: 22rem;
+    }
+    .whats{
+        left: 75%;
     }
   }
